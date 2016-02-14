@@ -1,0 +1,81 @@
+Subject,Year,Semester,Projected,Actual,In Renovated Building
+Math,2010,Fall,450,463,Yes
+Biology,2010,Fall,250,246,Yes
+English,2010,Fall,190,193,No
+Physics,2010,Fall,100,96,No
+Yoga,2010,Fall,50,51,No
+Economics,2010,Fall,100,99,No
+Computer Science,2010,Fall,510,524,No
+Scandinavian,2010,Fall,35,29,No
+Math,2011,Spring,450,472,No
+Biology,2011,Spring,255,253,No
+English,2011,Spring,190,195,No
+Physics,2011,Spring,100,95,No
+Yoga,2011,Spring,50,64,No
+Economics,2011,Spring,100,97,Yes
+Computer Science,2011,Spring,475,458,Yes
+Scandinavian,2011,Spring,35,28,No
+Math,2011,Fall,475,488,Yes
+Biology,2011,Fall,265,376,Yes
+English,2011,Fall,170,174,Yes
+Physics,2011,Fall,110,98,No
+Yoga,2011,Fall,51,53,No
+Economics,2011,Fall,100,97,No
+Computer Science,2011,Fall,505,503,No
+Scandinavian,2011,Fall,36,27,No
+Math,2012,Spring,475,490,Yes
+Biology,2012,Spring,270,384,Yes
+English,2012,Spring,170,166,Yes
+Physics,2012,Spring,110,101,No
+Yoga,2012,Spring,51,50,No
+Economics,2012,Spring,100,104,No
+Computer Science,2012,Spring,480,489,Yes
+Scandinavian,2012,Spring,36,26,No
+Math,2012,Fall,500,534,Yes
+Biology,2012,Fall,275,388,Yes
+English,2012,Fall,180,168,No
+Physics,2012,Fall,110,109,No
+Yoga,2012,Fall,51,50,No
+Economics,2012,Fall,100,152,Yes
+Computer Science,2012,Fall,480,480,Yes
+Scandinavian,2012,Fall,36,26,No
+Math,2013,Spring,500,557,Yes
+Biology,2013,Spring,280,394,Yes
+English,2013,Spring,190,200,Yes
+Physics,2013,Spring,120,110,No
+Yoga,2013,Spring,52,48,No
+Economics,2013,Spring,100,89,No
+Computer Science,2013,Spring,510,512,Yes
+Scandinavian,2013,Spring,37,25,No
+Math,2013,Fall,500,563,Yes
+Biology,2013,Fall,290,394,Yes
+English,2013,Fall,200,210,Yes
+Physics,2013,Fall,120,112,No
+Yoga,2013,Fall,52,47,No
+Economics,2013,Fall,100,90,No
+Computer Science,2013,Fall,485,479,Yes
+Scandinavian,2013,Fall,37,25,No
+Math,2014,Spring,500,552,Yes
+Biology,2014,Spring,300,394,Yes
+English,2014,Spring,200,208,Yes
+Physics,2014,Spring,120,112,Yes
+Yoga,2014,Spring,52,49,No
+Economics,2014,Spring,100,86,No
+Computer Science,2014,Spring,485,484,Yes
+Scandinavian,2014,Spring,37,26,No
+Math,2014,Fall,500,263,No
+Biology,2014,Fall,310,201,No
+English,2014,Fall,190,87,No
+Physics,2014,Fall,120,66,No
+Yoga,2014,Fall,53,25,No
+Economics,2014,Fall,150,73,No
+Computer Science,2014,Fall,490,247,No
+Scandinavian,2014,Fall,38,13,No
+Math,2015,Spring,500,,
+Biology,2015,Spring,400,,
+English,2015,Spring,200,,
+Physics,2015,Spring,120,,
+Yoga,2015,Spring,53,,
+Economics,2015,Spring,150,,
+Computer Science,2015,Spring,490,,
+Scandinavian,2015,Spring,38,,

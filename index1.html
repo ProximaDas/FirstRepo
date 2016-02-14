@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Course Enrollment Data</title>
+
+    <link rel="stylesheet" href="_css/main.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+    <div id="test"></div>
+    <div id="ifstatement"></div>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+        
+    </div>
+
+<script>
+	//PART 1: SET UP CHART OPTIONS & GENERATE USING INLINE DATA
+	var options = {
+		chart: {
+			renderTo: "container",
+			type: "line"
+		},
+        title: {
+            text: 'Course Enrollment Data',
+            x: -20 //center
+        },
+        xAxis: {
+             categories: []
+        },
+        yAxis: {
+            title: {
+                text: 'Enrollment numbers'
+            }
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: []
+    };
+
+    //PART 2: LOADING DATA FROM A CSV USING AJAX. 
+    pData = [[],[],[],[],[],[],[],[]];
+    // ajax call to pull in data from the csv file data.csv
+    $.get("_data/Education.csv", function (data) {
+    	
+    	//split the csv by line using ('\n')
+    	var lines = data.split("\n");
+        xAxis = [];
+
+        
+    	//loop through each line of the csv file using $.each
+    	$.each(lines, function ( lineNo, line ) {
+    		
+            //set var items equal to an array of the current line's values
+            //turn each line into an array by splitting on ","
+    		var items = line.split(",");
+    		
+            //for first line of data (header) populate xAxis categories with months
+    		if (lineNo != 0) {
+    			
+    			//loop through each item in the array items
+    			$.each(items, function (itemNo, item) {
+    				//skip the first item in line 0 because it is the City label
+                    //for the rest of the first row of data add to the categories variable for the xAxis using push method within the if statement
+                    if (itemNo == 0) {
+                        //use the push method to push each item to the xAxis categories property in options
+    					if (xAxis.indexOf(items[0]) == -1) {xAxis.push(items[0])};
+    				}
+    				
+    			})
+
+    			projectedData = {
+    				name: "",
+    				data: []
+    			};
+	  			//grab the seriesData obect and populate with data from items
+                //set the first value in the items array to seriesData.name
+                projectedData.name = items[0];
+                projectedData.data = items[3];
+
+                if (items[0] == 'Math') {pData[0].push(Number(items[3]));} 
+                    else if (items[0] == 'Biology') {pData[1].push(Number(items[3]))} 
+                        else if (items[0] == 'English') {pData[2].push(Number(items[3]))} 
+                            else if (items[0] == 'Physics') {pData[3].push(Number(items[3]))} 
+                                else if (items[0] == 'Yoga') {pData[4].push(Number(items[3]))} 
+                                    else if (items[0] == 'Economics') {pData[5].push(Number(items[3]))} 
+                                        else if (items[0] == 'Computer Science') {pData[6].push(Number(items[3]))} 
+                                            else if (items[0] == 'Scandinavian') {pData[7].push(Number(items[3]))};
+    			
+    			//loop through each item in the array items for current line and add to data array
+    			
+    			//Now you have your var seriesData populated with the cities in name and the temperatures in data
+                //push seriesData to series in chart options
+    			
+    		};
+
+
+    });
+    $.each(xAxis, function(axisNo,axis){options.xAxis.categories.push(axis)}); 
+    $.each(pData, function(dataNo,ndata) {
+        if (dataNo == 0) {options.series.push({name:"Math",data:ndata})}
+            else if (dataNo == 1) {options.series.push({name:"Biology",data:ndata})}
+        else if (dataNo == 2) {options.series.push({name:"English",data:ndata})}
+        else if (dataNo == 3) {options.series.push({name:"Physics",data:ndata})}
+        else if (dataNo == 4) {options.series.push({name:"Yoga",data:ndata})}
+        else if (dataNo == 5) {options.series.push({name:"Economics",data:ndata})}
+        else if (dataNo == 6) {options.series.push({name:"Computer Science",data:ndata})}
+        else if (dataNo == 7) {options.series.push({name:"Scandinavian",data:ndata})};
+        });   
+    // options.xAxis.categories.push(xAxis);    
+    //draw the chart by creating a new Highcharts object with the settings defined in options
+    var chart = new Highcharts.Chart(options);
+});
+
+</script>
+</body>
+</html>
